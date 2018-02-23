@@ -9,6 +9,12 @@
     'depends': [
         'web',
     ],
+    'images': [
+        'db_selector',
+        'db_manager',
+        'db_create',
+        'db_restore',
+    ],
     'installable': True,
     'auto_install': True,
 }
