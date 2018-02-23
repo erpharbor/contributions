@@ -5,7 +5,7 @@ import json
 import odoo
 from odoo import http
 from odoo.addons.web.controllers.main import DBNAME_PATTERN, db_monodb,\
-    Database as DB, env
+    Database as DB
 
 loader = jinja2.PackageLoader('odoo.addons.web_extend_db_manager_layout',
                               "views")
@@ -16,7 +16,7 @@ env.filters["json"] = json.dumps
 class Database(DB):
 
     def _render_template(self, **d):
-        d.setdefault('manage',True)
+        d.setdefault('manage', True)
         d['insecure'] = odoo.tools.config['admin_passwd'] == 'admin'
         d['list_db'] = odoo.tools.config['list_db']
         d['langs'] = odoo.service.db.exp_list_lang()
