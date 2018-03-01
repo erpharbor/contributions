@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="webcam_js" name="WebCam JS" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/hr_web_camera/static/src/lib/webcam.min.js"/>
+            <script type="text/javascript" src="/hr_web_camera/static/src/js/capture_image.js"/>
+        </xpath>
+    </template>
+
+</odoo>
