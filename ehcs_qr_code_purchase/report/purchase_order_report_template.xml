@@ -1,0 +1,27 @@
+<odoo>
+    <template id="purchase_order_report_template" inherit_id="purchase.report_purchaseorder_document">
+
+        <h2 t-if="o.state != 'draft'" position="replace">
+           <div t-if="o.state != 'draft'" style="width:700px; height:110px;float:left;">
+               <div style="width:600px;float:left;">
+                   <h2>Purchase Order Confirmation #<span t-field="o.name"/></h2>
+               </div>
+               <div style="width:100px;height:100px;float:left;">
+                   <span t-field="o.qr_image" t-field-options='{"widget": "image"}'/>
+               </div>
+           </div>
+        </h2>
+
+        <h2 t-if="o.state == 'draft'" position="replace">
+           <div t-if="o.state == 'draft'" style="width:700px; height:110px;float:left;">
+               <div style="width:600px;float:left;">
+                   <h2>Request for Quotation #<span t-field="o.name"/></h2>
+               </div>
+               <div style="width:100px;height:100px;float:left;">
+                   <span t-field="o.qr_image" t-field-options='{"widget": "image"}'/>
+               </div>
+           </div>
+        </h2>
+
+    </template>
+</odoo>
