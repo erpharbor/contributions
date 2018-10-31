@@ -9,6 +9,9 @@
             <div class="oe_title" position="before">
                 <field name="qr_image" widget="image" width="100" height="100"/><br/>
             </div>
+            <field name="date_order" position="after">
+                <field name="qr_in_report"/>
+            </field>
         </field>
     </record>
 </odoo>

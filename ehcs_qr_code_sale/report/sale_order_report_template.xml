@@ -10,9 +10,11 @@
                        <span t-field="doc.name"/>
                    </h2>
                </div>
-               <div style="width:100px;height:100px;float:left;">
-                   <span t-field="doc.qr_image" t-field-options='{"widget": "image"}' />
-               </div>
+               <t t-if="doc.qr_in_report == True">
+                   <div style="width:100px;height:100px;float:left;">
+                       <span t-field="doc.qr_image" t-field-options='{"widget": "image"}' />
+                   </div>
+               </t>
            </div>
 
         </xpath>

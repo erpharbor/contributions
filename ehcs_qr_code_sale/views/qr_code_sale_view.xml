@@ -9,6 +9,9 @@
             <field name="name" position="before">
                 <field name="qr_image" widget="image" width="100" height="100"/><br/>
             </field>
+            <field name="partner_id" position="after">
+                <field name="qr_in_report"/>
+            </field>
         </field>
     </record>
 </odoo>

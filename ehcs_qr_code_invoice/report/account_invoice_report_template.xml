@@ -15,9 +15,11 @@
                         <span t-field="o.number"/>
                     </h2>
                 </div>
-                <div style="width:100px;height:100px;float:left;">
-                    <span t-field="o.qr_image" t-field-options='{"widget": "image"}' />
-                </div>
+                <t t-if="o.qr_in_report == True">
+                    <div style="width:100px;height:100px;float:left;">
+                        <span t-field="o.qr_image" t-field-options='{"widget": "image"}' />
+                    </div>
+                </t>
             </div>
 
         </xpath>

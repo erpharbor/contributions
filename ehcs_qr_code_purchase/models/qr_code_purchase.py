@@ -9,6 +9,7 @@ class QRCodePurchase(models.Model):
     _inherit = 'purchase.order'
 
     qr_image = fields.Binary("QR Code", compute='_generate_qr_code')
+    qr_in_report = fields.Boolean('Show QR in Report')
 
     @api.one
     def _generate_qr_code(self):
