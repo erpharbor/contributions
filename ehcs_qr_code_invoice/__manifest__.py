@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'QR Code Invoice',
-    'category': 'Base',
+    'version': '10.0.1.0.0',
+    'category': 'Accountinh',
     'author': 'ERP Harbor Consulting Services',
     'summary': 'Generate QR Code for Invoice',
-    'website': 'www.erpharbor.com',
-    'version': '10.0.1.0.0',
+    'website': 'http://www.erpharbor.com',
     'description': """""",
     'depends': [
-        'account','ehcs_qr_code_base',
+        'ehcs_qr_code_base',
+        'account',
     ],
     'data': [
         'report/account_invoice_report_template.xml',
         'views/qr_code_invoice_view.xml',
+    ],
+    'images': [
+        'static/description/banner.png',
     ],
 }
