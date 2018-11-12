@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'QR Code Purchase',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Purchase',
     'author': 'ERP Harbor Consulting Services',
     'summary': 'Generate QR Code for Purchase',

@@ -1,19 +1,6 @@
 <odoo>
     <template id="purchase_order_report_template" inherit_id="purchase.report_purchaseorder_document">
 
-        <h2 t-if="o.state != 'draft'" position="replace">
-           <div t-if="o.state != 'draft'" style="width:700px; height:110px;float:left;">
-               <div style="width:600px;float:left;">
-                   <h2>Purchase Order Confirmation #<span t-field="o.name"/></h2>
-               </div>
-               <t t-if="o.qr_in_report == True">
-                   <div style="width:100px;height:100px;float:left;">
-                       <span t-field="o.qr_image" t-field-options='{"widget": "image"}'/>
-                   </div>
-               </t>
-           </div>
-        </h2>
-
         <h2 t-if="o.state == 'draft'" position="replace">
            <div t-if="o.state == 'draft'" style="width:700px; height:110px;float:left;">
                <div style="width:600px;float:left;">
@@ -21,7 +8,46 @@
                </div>
                <t t-if="o.qr_in_report == True">
                    <div style="width:100px;height:100px;float:left;">
-                       <span t-field="o.qr_image" t-field-options='{"widget": "image"}'/>
+                       <span t-field="o.qr_image" t-options='{"widget": "image"}'/>
+                   </div>
+               </t>
+           </div>
+        </h2>
+
+        <h2 t-if="o.state in ['sent', 'to approve']" position="replace">
+           <div t-if="o.state in ['sent', 'to approve']" style="width:700px; height:110px;float:left;">
+               <div style="width:600px;float:left;">
+                   <h2>Purchase Order #<span t-field="o.name"/></h2>
+               </div>
+               <t t-if="o.qr_in_report == True">
+                   <div style="width:100px;height:100px;float:left;">
+                       <span t-field="o.qr_image" t-options='{"widget": "image"}'/>
+                   </div>
+               </t>
+           </div>
+        </h2>
+
+        <h2 t-if="o.state in ['purchase', 'done']" position="replace">
+           <div t-if="o.state in ['purchase', 'done']" style="width:700px; height:110px;float:left;">
+               <div style="width:600px;float:left;">
+                   <h2>Purchase Order Confirmation #<span t-field="o.name"/></h2>
+               </div>
+               <t t-if="o.qr_in_report == True">
+                   <div style="width:100px;height:100px;float:left;">
+                       <span t-field="o.qr_image" t-options='{"widget": "image"}'/>
+                   </div>
+               </t>
+           </div>
+        </h2>
+        
+        <h2 t-if="o.state == 'cancel'" position="replace">
+           <div t-if="o.state == 'cancel'" style="width:700px; height:110px;float:left;">
+               <div style="width:600px;float:left;">
+                   <h2>Cancelled Purchase Order #<span t-field="o.name"/></h2>
+               </div>
+               <t t-if="o.qr_in_report == True">
+                   <div style="width:100px;height:100px;float:left;">
+                       <span t-field="o.qr_image" t-options='{"widget": "image"}'/>
                    </div>
                </t>
            </div>

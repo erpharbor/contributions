@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'QR Code Base',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Base',
     'author': 'ERP Harbor Consulting Services',
     'summary': 'QR Code Base',

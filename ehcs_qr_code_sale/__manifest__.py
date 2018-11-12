@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'QR Code Sale',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Base',
     'author': 'ERP Harbor Consulting Services',
     'summary': 'Generate QR Code for Sale',
