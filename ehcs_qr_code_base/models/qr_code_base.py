@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import qrcode
 import base64
-import cStringIO
+from io import BytesIO
 
 
 def generate_qr_code(url):
@@ -13,9 +13,8 @@ def generate_qr_code(url):
              )
     qr.add_data(url)
     qr.make(fit=True)
-
     img = qr.make_image()
-    temp = cStringIO.StringIO()
+    temp = BytesIO()
     img.save(temp, format="PNG")
     qr_img = base64.b64encode(temp.getvalue())
     return qr_img

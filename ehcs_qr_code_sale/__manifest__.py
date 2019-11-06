@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'QR Code Sale',
-    'version': '10.0.1.0.0',
+    'version': '13.0.1.0.0',
     'category': 'Base',
     'author': 'ERP Harbor Consulting Services',
     'summary': 'Generate QR Code for Sale',
@@ -9,7 +9,7 @@
     'description': """""",
     'depends': [
         'ehcs_qr_code_base',
-        'sale',
+        'sale_management',
     ],
     'data': [
         'report/sale_order_report_template.xml',
@@ -18,4 +18,5 @@
     'images': [
         'static/description/banner.png',
     ],
+    'installable': True,
 }
