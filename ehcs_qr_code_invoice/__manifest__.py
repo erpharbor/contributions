@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'QR Code Invoice',
-    'version': '14.0.1.0.0',
+    'version': '15.0.1.0.0',
     'category': 'Accounting',
     'author': 'ERP Harbor Consulting Services',
     'summary': 'Generate QR Code for Invoice',

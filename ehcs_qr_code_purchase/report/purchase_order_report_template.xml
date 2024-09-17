@@ -1,7 +1,7 @@
 <odoo>
     <template id="purchase_order_report_template" inherit_id="purchase.report_purchaseorder_document">
 
-        <h2 t-if="o.state == 'draft'" position="replace">
+        <h2 t-if="o.state in ['draft', 'sent', 'to approve']" position="replace">
            <div t-if="o.state == 'draft'" style="width:700px; height:110px;float:left;">
                <div style="width:600px;float:left;">
                    <h2>Request for Quotation #<span t-field="o.name"/></h2>
@@ -14,7 +14,10 @@
            </div>
         </h2>
 
-        <h2 t-if="o.state in ['sent', 'to approve']" position="replace">
+        <!-- in odoo14 if state in ['sent', 'to approve'] then print name Purchase Order #
+        but in odoo15 if state in ['sent', 'to approve'] then print Request for Quotation # -->
+        
+        <!-- <h2 t-if="o.state in ['sent', 'to approve']" position="replace">
            <div t-if="o.state in ['sent', 'to approve']" style="width:700px; height:110px;float:left;">
                <div style="width:600px;float:left;">
                    <h2>Purchase Order #<span t-field="o.name"/></h2>
@@ -25,7 +28,7 @@
                    </div>
                </t>
            </div>
-        </h2>
+        </h2> -->
 
         <h2 t-if="o.state in ['purchase', 'done']" position="replace">
            <div t-if="o.state in ['purchase', 'done']" style="width:700px; height:110px;float:left;">
